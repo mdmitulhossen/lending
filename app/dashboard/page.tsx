@@ -1,26 +1,26 @@
 "use client"
 
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Progress } from "@/components/ui/progress"
 import {
-  DollarSign,
-  TrendingUp,
-  Clock,
-  CheckCircle,
   AlertCircle,
-  Plus,
-  Eye,
-  User,
-  LogOut,
-  CreditCard,
-  FileText,
-  Calendar,
-  Bell,
-  Download,
-  ArrowUpRight,
   ArrowDownRight,
+  ArrowUpRight,
+  Bell,
+  Calendar,
+  CheckCircle,
+  Clock,
+  CreditCard,
+  DollarSign,
+  Download,
+  Eye,
+  FileText,
+  LogOut,
+  Plus,
+  TrendingUp,
+  User,
 } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -170,7 +170,7 @@ export default function DashboardPage() {
         {/* Welcome Section */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900">Welcome back, {user.fullName}!</h1>
-          <p className="text-gray-600 mt-2">Here's an overview of your loan activity and account status.</p>
+          <p className="text-gray-600 mt-2">Here&#39;s an overview of your loan activity and account status.</p>
         </div>
 
         {notifications.filter((n) => !n.read).length > 0 && (
@@ -283,16 +283,18 @@ export default function DashboardPage() {
                         <div className="flex justify-between text-sm">
                           <span className="text-gray-600">Progress</span>
                           <span className="font-medium">
-                            ${(loan.amount - loan.remainingBalance).toLocaleString()} / ${loan.amount.toLocaleString()}
+                            ${(loan.amount - (loan.remainingBalance ?? 0)).toLocaleString()} / ${loan.amount.toLocaleString()}
                           </span>
                         </div>
-                        <Progress value={((loan.amount - loan.remainingBalance) / loan.amount) * 100} className="h-2" />
+                        <Progress value={((loan.amount - (loan.remainingBalance ?? 0)) / loan.amount) * 100} className="h-2" />
                       </div>
 
                       <div className="grid grid-cols-2 gap-4 text-sm">
                         <div>
                           <p className="text-gray-600">Next Payment</p>
-                          <p className="font-medium">{new Date(loan.nextPayment).toLocaleDateString()}</p>
+                          <p className="font-medium">
+                            {loan.nextPayment ? new Date(loan.nextPayment).toLocaleDateString() : "N/A"}
+                          </p>
                         </div>
                         <div>
                           <p className="text-gray-600">Payment Amount</p>
@@ -300,7 +302,7 @@ export default function DashboardPage() {
                         </div>
                         <div>
                           <p className="text-gray-600">Remaining Balance</p>
-                          <p className="font-medium">${loan.remainingBalance.toLocaleString()}</p>
+                          <p className="font-medium">${(loan.remainingBalance ?? 0).toLocaleString()}</p>
                         </div>
                         <div>
                           <p className="text-gray-600">Interest Rate</p>
@@ -338,9 +340,8 @@ export default function DashboardPage() {
                     <div key={transaction.id} className="flex items-center justify-between p-3 border rounded-lg">
                       <div className="flex items-center space-x-3">
                         <div
-                          className={`w-8 h-8 rounded-full flex items-center justify-center ${
-                            transaction.type === "payment" ? "bg-red-100" : "bg-green-100"
-                          }`}
+                          className={`w-8 h-8 rounded-full flex items-center justify-center ${transaction.type === "payment" ? "bg-red-100" : "bg-green-100"
+                            }`}
                         >
                           {transaction.type === "payment" ? (
                             <ArrowUpRight className="h-4 w-4 text-red-600" />
@@ -355,9 +356,8 @@ export default function DashboardPage() {
                       </div>
                       <div className="text-right">
                         <p
-                          className={`font-semibold ${
-                            transaction.type === "payment" ? "text-red-600" : "text-green-600"
-                          }`}
+                          className={`font-semibold ${transaction.type === "payment" ? "text-red-600" : "text-green-600"
+                            }`}
                         >
                           {transaction.type === "payment" ? "-" : "+"}${transaction.amount.toLocaleString()}
                         </p>
@@ -395,7 +395,7 @@ export default function DashboardPage() {
                         <div className="text-right">
                           <Badge className="bg-green-100 text-green-800 hover:bg-green-100">Completed</Badge>
                           <p className="text-sm text-gray-600 mt-1">
-                            {new Date(loan.completedDate).toLocaleDateString()}
+                            {loan.completedDate ? new Date(loan.completedDate).toLocaleDateString() : "N/A"}
                           </p>
                         </div>
                       </div>

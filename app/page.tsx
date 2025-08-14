@@ -1,7 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle, Shield, Zap, Users, Star, ArrowRight } from "lucide-react"
+import { ArrowRight, CheckCircle, Shield, Star, Users, Zap } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -103,7 +104,7 @@ export default function HomePage() {
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">Why Choose QuickieCashie?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We've designed our platform to make getting a loan as simple and secure as possible.
+              We&rsquo;ve designed our platform to make getting a loan as simple and secure as possible.
             </p>
           </div>
 
@@ -215,8 +216,8 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic">
-                  "QuickieCashie made it so easy to get the cash I needed for unexpected expenses! The whole process
-                  took less than 10 minutes."
+                  &rdquo;QuickieCashie made it so easy to get the cash I needed for unexpected expenses! The whole process
+                  took less than 10 minutes.&#34;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -238,8 +239,8 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic">
-                  "As a driver, I needed quick access to funds for vehicle repairs. QuickieCashie delivered exactly what
-                  I needed when I needed it."
+                  &rdquo;As a driver, I needed quick access to funds for vehicle repairs. QuickieCashie delivered exactly what
+                  I needed when I needed it.&#34;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -261,8 +262,8 @@ export default function HomePage() {
                   ))}
                 </div>
                 <p className="text-gray-600 italic">
-                  "The transparent terms and no hidden fees policy gave me confidence. Highly recommend QuickieCashie
-                  for anyone needing fast cash."
+                  &#34;The transparent terms and no hidden fees policy gave me confidence. Highly recommend QuickieCashie
+                  for anyone needing fast cash.&#34;
                 </p>
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">

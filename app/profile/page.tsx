@@ -1,29 +1,31 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import type React from "react"
 
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import {
-  User,
-  Briefcase,
-  CreditCard,
-  Shield,
-  Bell,
-  LogOut,
-  Edit3,
-  Save,
-  X,
-  CheckCircle,
   AlertCircle,
+  Bell,
+  Briefcase,
   Camera,
+  CheckCircle,
+  CreditCard,
+  Edit3,
+  LogOut,
+  Save,
+  Shield,
+  User,
+  X,
 } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"

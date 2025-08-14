@@ -1,27 +1,29 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Progress } from "@/components/ui/progress"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
-import { Checkbox } from "@/components/ui/checkbox"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Progress } from "@/components/ui/progress"
-import { Badge } from "@/components/ui/badge"
 import {
+  AlertCircle,
   ArrowLeft,
   ArrowRight,
   CheckCircle,
   DollarSign,
   FileText,
-  Shield,
-  AlertCircle,
   Info,
+  LogOut,
+  Shield,
   Upload,
   User,
-  LogOut,
 } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -354,7 +356,7 @@ function PersonalInformationStep({ applicationData, updateApplicationData }: any
           <div>
             <h4 className="font-semibold text-green-900">Information Pre-filled</h4>
             <p className="text-sm text-green-700 mt-1">
-              We've pre-filled this information from your profile. Please review and update if necessary.
+              We&#39;ve pre-filled this information from your profile. Please review and update if necessary.
             </p>
           </div>
         </div>
@@ -439,7 +441,7 @@ function EmploymentIncomeStep({ applicationData, updateApplicationData }: any) {
           <div>
             <h4 className="font-semibold text-green-900">Information Pre-filled</h4>
             <p className="text-sm text-green-700 mt-1">
-              We've pre-filled this information from your profile. Please review and update if necessary.
+              We&#39;ve pre-filled this information from your profile. Please review and update if necessary.
             </p>
           </div>
         </div>
@@ -529,7 +531,7 @@ function EmploymentIncomeStep({ applicationData, updateApplicationData }: any) {
           <div>
             <h4 className="font-semibold text-blue-900">Income Verification</h4>
             <p className="text-sm text-blue-700 mt-1">
-              You'll need to upload proof of income documents in the next steps to verify this information.
+              You&#39;ll need to upload proof of income documents in the next steps to verify this information.
             </p>
           </div>
         </div>
@@ -674,7 +676,7 @@ function ReviewSubmitStep({ applicationData, updateApplicationData, onSubmit }: 
             Document Upload Required
           </CardTitle>
           <CardDescription>
-            You'll be redirected to upload required documents after submitting this application
+            You&#39;ll be redirected to upload required documents after submitting this application
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -685,7 +687,7 @@ function ReviewSubmitStep({ applicationData, updateApplicationData, onSubmit }: 
               </div>
               <div>
                 <p className="font-medium">Government ID</p>
-                <p className="text-sm text-gray-600">Driver's license or passport</p>
+                <p className="text-sm text-gray-600">Driver&#39;s license or passport</p>
               </div>
             </div>
 

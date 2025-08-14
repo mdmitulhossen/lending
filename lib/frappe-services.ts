@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { frappeAPI } from "./frappe-api"
-import type { FrappeUser, FrappeCustomer, LoanApplication, Loan, LoanPayment } from "./frappe-types"
+import type { FrappeCustomer, FrappeUser, Loan, LoanApplication, LoanPayment } from "./frappe-types"
 
 // Authentication Services
 export class AuthService {

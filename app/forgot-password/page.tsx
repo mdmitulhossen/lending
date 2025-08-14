@@ -68,7 +68,7 @@ export default function ForgotPasswordPage() {
             ) : (
               <div className="space-y-6 text-center">
                 <p className="text-gray-600">
-                  If an account with that email exists, you'll receive password reset instructions shortly.
+                  If an account with that email exists, you&rsquo;ll receive password reset instructions shortly.
                 </p>
                 <Button onClick={() => setIsSubmitted(false)} variant="outline" className="w-full h-12">
                   Try Another Email

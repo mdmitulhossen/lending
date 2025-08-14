@@ -1,14 +1,15 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 
 import type React from "react"
 
-import { useState, useRef, useCallback } from "react"
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { Badge } from "@/components/ui/badge"
-import { Upload, File, CheckCircle, AlertCircle, X, Eye, RefreshCw, FileText, ImageIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
+import { AlertCircle, CheckCircle, Eye, File, FileText, ImageIcon, RefreshCw, Upload, X } from "lucide-react"
+import { useCallback, useRef, useState } from "react"
 
 interface DocumentUploadProps {
   documentType: "government_id" | "proof_of_address" | "proof_of_income" | "bank_statement"

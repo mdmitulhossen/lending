@@ -1,13 +1,14 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
-import { useState, useEffect } from "react"
+import { DocumentUpload } from "@/components/document-upload"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { DocumentUpload } from "@/components/document-upload"
-import { FileText, Shield, CheckCircle, User, LogOut, ArrowLeft, Info, Upload } from "lucide-react"
-import Link from "next/link"
 import { LoanApplicationService } from "@/lib/frappe-services"
+import { ArrowLeft, CheckCircle, FileText, Info, LogOut, Shield, Upload, User } from "lucide-react"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 interface DocumentStatus {
   government_id: "pending" | "verified" | "rejected" | null

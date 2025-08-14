@@ -39,7 +39,7 @@ export default function LoginPage() {
         {/* Sign Up Link */}
         <div className="text-center">
           <p className="text-gray-600">
-            Don't have an account?{" "}
+            Don&#39;t have an account?{" "}
             <Link href="/signup" className="text-blue-600 hover:text-blue-700 font-semibold">
               Sign up for free
             </Link>
@@ -67,11 +67,13 @@ function LoginForm() {
     setError("")
 
     try {
-      const result = await fetch('/api/frappe-login', {
+      const response = await fetch('/api/frappe-login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ usr: 'admin@gmail.com', pwd: 'Pass@1234' }),
       });
+
+      const result = await response.json();
 
       if (result.success) {
         localStorage.setItem("user", JSON.stringify(result.user))

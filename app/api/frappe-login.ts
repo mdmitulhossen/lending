@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // pages/api/frappe-login.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
